@@ -17,15 +17,29 @@
             <div class="col-md-12">
                 <div data-toggle="portlet" class="col-lg-12">
                     <!-- START panel-->
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="btn-group pull-right">
+
+                                <a href="" type="button" class="btn btn-labeled btn-success btn-sm">
+                                    <span class="btn-label"><i class="fa fa-arrow-circle-left"></i>
+                                    </span>Export CSV</a>
+                                <!-- Danger button with label -->
+                                <a href="" type="button" class="btn btn-labeled btn-danger btn-sm">
+
+                                    </span>Export PDF<span class="btn-label"><i class="fa fa-arrow-circle-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
                     <div class="panel panel-primary">
-                        <div class="panel-heading portlet-handler">Primary Panel
+                        <div class="panel-heading portlet-handler">Sent SMS Items
                             <a href="#" data-perform="panel-dismiss" data-toggle="tooltip" title="Close Panel" class="pull-right portlet-cancel">
                                 <em class="fa fa-times"></em>
                             </a>
                         </div>
 
                         <div class="panel-body">
-                            <table id="datatable2" class="table table-striped table-hover">
+                            <table id="datatable" class="table table-striped table-hover">
                                 <thead>
                                     <tr>
                                         <th>No</th>

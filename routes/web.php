@@ -39,6 +39,8 @@ Route::post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail'
 Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm')->name('password.reset');
 Route::post('password/reset', 'Auth\ResetPasswordController@reset');
 
+Route::get('sendMessage', ['as' => 'sendMessage', 'uses' => 'SendSmsController@sendMessage']);
+
 Route::group(['prefix' => '/Dashboard'], function () {
     Route::get('home', ['as' => 'home', 'uses' => 'HomeController@index']);
     Route::get('sendsms', ['as' => 'sendSMS', 'uses' => 'SendSmsController@index']);
