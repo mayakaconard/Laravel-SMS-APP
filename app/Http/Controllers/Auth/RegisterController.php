@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Symfony\Component\HttpFoundation\Request;
 
 class RegisterController extends Controller
 {
@@ -46,10 +47,58 @@ class RegisterController extends Controller
      * @param  array  $data
      * @return \Illuminate\Contracts\Validation\Validator
      */
+    public function register(Request $request)
+    {
+        // return $request;
+        $response = array(
+            'response' => ''
+        );
+
+        $validator = Validator::make($request->all(), [
+            'first_name' => ['required', 'string', 'max:255'],
+            'surname' => ['required', 'string', 'max:255'],
+            'mobile_no' => ['required', 'string', 'max:255'],
+            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'password' => ['required', 'string', 'min:8'],
+        ]);
+
+
+        if ($validator->fails()) {
+
+            $response['response'] = $validator->messages();
+
+            return response()->json([
+                'errors' => $response,
+
+            ], 422);
+        }
+
+
+
+        $user = new User([
+            'first_name' => $request->first_name,
+            'surname' => $request->surname,
+            'phone_no' => $request->mobile_no,
+            'email' => $request->email,
+            'password' => Hash::make($request->password),
+
+
+        ]);
+
+
+        if ($user->save()) {
+            return redirect('/login');
+        } else {
+            return   ["data" => "data not inserted", "status" => 400];
+        }
+    }
+
+
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'name' => ['required', 'string', 'max:255'],
+            'first_name' => ['required', 'string', 'max:255'],
+            'surname' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
@@ -59,12 +108,14 @@ class RegisterController extends Controller
      * Create a new user instance after a valid registration.
      *
      * @param  array  $data
-     * @return \App\User
+     * @return \App\Userregister
      */
     protected function create(array $data)
     {
         return User::create([
-            'name' => $data['name'],
+            'first_name' => $data['first_name'],
+            'surname' => $data['surname'],
+
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
         ]);
