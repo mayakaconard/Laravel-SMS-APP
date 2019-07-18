@@ -23,7 +23,7 @@
                                 <em class="fa fa-times"></em>
                             </a>
                         </div>
-                        <form role="form" method="post" action="">
+                        <form role="form" method="POST" action="{{route('sendMessage')}}">
                             @csrf
                             <div class="panel-body">
 
@@ -62,7 +62,7 @@
 
                             </div>
                             <div class="panel-footer">
-                                <button type="button" class="btn btn-labeled btn-success">
+                                <button type="submit" class="btn btn-labeled btn-success">
                                     <span class="btn-label"><i class="fa fa-check"></i>
                                     </span>Send</button>
                                 <!-- Danger button with label -->

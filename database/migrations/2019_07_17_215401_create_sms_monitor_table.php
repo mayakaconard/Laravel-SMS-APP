@@ -18,9 +18,12 @@ class CreateSmsMonitorTable extends Migration
             $table->string('sender_id');
             $table->string('receiver_no');
             $table->string('message');
+            $table->string('messageId');
             $table->string('signature')->nullable();
             $table->string('status');
-
+            $table->string('statusCode');
+            $table->float('cost');
+            $table->integer('messageParts');
             $table->timestamps();
         });
     }
