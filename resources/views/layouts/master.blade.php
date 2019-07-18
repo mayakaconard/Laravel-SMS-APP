@@ -24,6 +24,8 @@
     <!-- FastClick for mobiles-->
     <script src="{{asset('assets/vendor/fastclick/fastclick.js')}}" type="application/javascript"></script>
     <script src="{{asset('assets/ga.js')}}"></script>
+    <link rel="stylesheet" href="{{asset('assets/vendor\datatable\extensions\datatable-bootstrap\css\dataTables.bootstrap.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/vendor\datatable\extensions\ColVis\css\dataTables.colVis.css')}}">
 </head>
 
 <body>
@@ -267,7 +269,17 @@
                             </li>
                             <li><a href="#">Messages<div class="label label-danger pull-right">10</div></a>
                             </li>
-                            <li><a href="{{url('logout')}}">Logout</a>
+                            <li>
+
+                                <a href="{{ url('logout') }}" onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                    {{ __('Logout') }}
+                                </a>
+
+                                <form id="logout-form" action="{{ url('logout') }}" method="POST" style="display: none;">
+                                    @csrf
+                                </form>
+
                             </li>
                         </ul>
                         <!-- END Dropdown menu-->
@@ -324,6 +336,10 @@
         <!-- END Page Custom Script-->
         <!-- App Main-->
         <script src="{{asset('assets/app/js/app.js')}}"></script>
+
+        <script src="{{asset('assets/vendor\datatable\media\js\jquery.dataTables.min.js')}}"></script>
+        <script src="{{asset('assets/vendor\datatable\extensions\datatable-bootstrap\js\dataTables.bootstrap.js')}}"></script>
+        <script src="{{asset('assets/vendor\datatable\extensions\datatable-bootstrap\js\dataTables.bootstrapPagination.js')}}"></script>
         <!-- END Scripts-->
 </body>
 

@@ -70,15 +70,15 @@
 
             </li>
             <li>
-                <a href="#" title="Charts" data-toggle="collapse-next" class="has-submenu">
+                <a href="" title="Charts" data-toggle="collapse-next" class="has-submenu">
                     <em class="fa fa-bar-chart-o"></em>
                     <span class="item-text">Send SMS</span>
                 </a>
                 <!-- START SubMenu item-->
                 <ul class="nav collapse ">
                     <li>
-                        <a href="chart-flot.html" title="Flot" data-toggle="" class="no-submenu">
-                            <span class="item-text">Sent Items</span>
+                        <a href="{{route('sendSMS')}}" title="Flot" data-toggle="" class="no-submenu">
+                            <span class="item-text">Send SMS</span>
                         </a>
                     </li>
                     <li>
@@ -92,13 +92,13 @@
             <li>
                 <a href="#" title="Tables" data-toggle="collapse-next" class="has-submenu">
                     <em class="fa fa-table"></em>
-                    <span class="item-text">Register Clients</span>
+                    <span class="item-text">Sent Items</span>
                 </a>
                 <!-- START SubMenu item-->
                 <ul class="nav collapse ">
                     <li>
-                        <a href="table-datatable.html" title="Data Table" data-toggle="" class="no-submenu">
-                            <span class="item-text">Data Table</span>
+                        <a href="{{route('sent_messages')}}" title="Data Table" data-toggle="" class="no-submenu">
+                            <span class="item-text">Sent SmS</span>
                         </a>
                     </li>
                     <li>

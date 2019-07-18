@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class SmsMonotorController extends Controller
+class SmsMonitorController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,7 +13,7 @@ class SmsMonotorController extends Controller
      */
     public function index()
     {
-        //
+        return view('app.sent_items');
     }
 
     /**

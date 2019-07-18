@@ -17,7 +17,7 @@ class AuthController extends Controller
 
             // $user = Auth::user();
 
-            return redirect()->intended('/dashboard');
+            return redirect()->intended(route('home'));
         } else {
             return redirect('/login');
         }
@@ -26,6 +26,6 @@ class AuthController extends Controller
     public function logout()
     {
         Auth::logout();
-        redirect('/login');
+        return redirect()->route('login');
     }
 }

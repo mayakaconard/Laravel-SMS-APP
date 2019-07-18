@@ -18,11 +18,11 @@ Route::get('/', function () {
 Route::get('/', 'Auth\LoginController@showLoginForm');
 //Route::get('/register', 'HomeController@register');
 //Route::get('/signup', ['as' => 'signup', 'uses' => 'HomeController@signup']);
-Route::get('/dashboard', ['as' => 'dashboard', 'uses' => 'HomeController@dashboard']);
+
 
 //Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+// Route::get('/home', 'HomeController@index')->name('home');
 
 
 Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
@@ -38,3 +38,9 @@ Route::get('password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm'
 Route::post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail')->name('password.email');
 Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm')->name('password.reset');
 Route::post('password/reset', 'Auth\ResetPasswordController@reset');
+
+Route::group(['prefix' => '/Dashboard'], function () {
+    Route::get('home', ['as' => 'home', 'uses' => 'HomeController@index']);
+    Route::get('sendsms', ['as' => 'sendSMS', 'uses' => 'SendSmsController@index']);
+    Route::get('sent_messages', ['as' => 'sent_messages', 'uses' => 'SmsMonitorController@index']);
+});
