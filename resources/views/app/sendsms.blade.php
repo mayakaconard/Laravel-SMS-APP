@@ -1,12 +1,12 @@
 @extends('layouts/master')
-
+@section('title', 'Dashboard/Send SMS')
 @section('content')
 <section>
     <!-- START Page content-->
     <section class="main-content">
-        <button type="button" class="btn btn-labeled btn-primary pull-right">
+        <!-- <button type="button" class="btn btn-labeled btn-primary pull-right">
             <span class="btn-label"><i class="fa fa-plus-circle"></i>
-            </span>Add Item</button>
+            </span>Add Item</button> -->
         <h3>
             Dashboard
             <br>
@@ -18,7 +18,7 @@
                 <div data-toggle="portlet" class="col-lg-12">
                     <!-- START panel-->
                     <div class="panel panel-primary">
-                        <div class="panel-heading portlet-handler">Primary Panel
+                        <div class="panel-heading portlet-handler">Send SMS
                             <a href="#" data-perform="panel-dismiss" data-toggle="tooltip" title="Close Panel" class="pull-right portlet-cancel">
                                 <em class="fa fa-times"></em>
                             </a>

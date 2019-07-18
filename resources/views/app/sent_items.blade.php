@@ -1,12 +1,13 @@
 @extends('layouts/master')
+@section('title', 'Dashboard/Manage SMS')
 
 @section('content')
 <section>
     <!-- START Page content-->
     <section class="main-content">
-        <button type="button" class="btn btn-labeled btn-primary pull-right">
+        <!-- <button type="button" class="btn btn-labeled btn-primary pull-right">
             <span class="btn-label"><i class="fa fa-plus-circle"></i>
-            </span>Add Item</button>
+            </span>Add Item</button> -->
         <h3>
             Dashboard
             <br>
@@ -27,7 +28,7 @@
                                 <!-- Danger button with label -->
                                 <a href="" type="button" class="btn btn-labeled btn-danger btn-sm">
 
-                                    </span>Export PDF<span class="btn-label"><i class="fa fa-arrow-circle-right"></i></a>
+                                    Export PDF<span class="btn-label"><i class="fa fa-arrow-circle-right"></i></span></a>
                             </div>
                         </div>
                     </div>

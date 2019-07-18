@@ -14,7 +14,10 @@ class SendSmsController extends Controller
 
     public function index()
     {
-        return view('app.sendsms');
+        $user = Auth::user();
+
+
+        return view('app.sendsms', compact('user'));
     }
 
     public function sendMessage(Request $request)

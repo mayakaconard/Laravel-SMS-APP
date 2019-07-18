@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="keywords" content="">
     <meta name="author" content="">
-    <title>47Admin - Bootstrap Admin Skin</title>
+    <title>@yield('title')</title>
     <link rel="stylesheet" href="{{asset('assets/app/css/bootstrap.css')}}">
     <!-- Vendor CSS-->
     <link rel="stylesheet" href="{{asset('assets/vendor/fontawesome/css/font-awesome.min.css')}}">
@@ -35,7 +35,7 @@
         <nav role="navigation" class="navbar navbar-default navbar-top navbar-fixed-top">
             <!-- START navbar header-->
             <div class="navbar-header">
-                <a href="#" class="navbar-brand">
+                <a href="{{route('home')}}" class="navbar-brand">
                     <div class="brand-logo">SMS APP</div>
                     <div class="brand-logo-collapsed">SMS</div>
                 </a>
@@ -236,6 +236,19 @@
                                         <small>Unread notifications</small>
                                         <span class="badge">14</span>
                                     </a>
+                                </div>
+                                <div class="btn-group text-center col-md-6">
+
+                                    <button type="button" data-toggle="tooltip" data-title="Add Contact" class="btn btn-link">
+                                        <em class="fa fa-user text-muted"><sup class="fa fa-plus"></sup>
+                                        </em>
+                                    </button>
+                                    <button type="button" data-toggle="tooltip" data-title="Settings" class="btn btn-link">
+                                        <em class="fa fa-cog text-muted"></em>
+                                    </button>
+                                    <button type="button" data-toggle="tooltip" data-title="Logout" class="btn btn-link">
+                                        <em class="fa fa-sign-out text-muted"></em>
+                                    </button>
                                 </div>
                                 <!-- END list group-->
                             </li>

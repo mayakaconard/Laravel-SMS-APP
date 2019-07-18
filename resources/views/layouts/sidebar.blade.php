@@ -15,8 +15,8 @@
                     </div>
                     <!-- Name and Role-->
                     <div class="user-block-info">
-                        <span class="user-block-name item-text">Welcome, Alex</span>
-                        <span class="user-block-role">Designer</span>
+                        <span class="user-block-name item-text">Welcome, {{$user->first_name}}</span>
+                        <!-- <span class="user-block-role">Designer</span> -->
                         <!-- START Dropdown to change status-->
                         <div class="btn-group user-block-status">
                             <button type="button" data-toggle="dropdown" data-play="fadeIn" data-duration="0.2" class="btn btn-xs dropdown-toggle">
@@ -62,7 +62,7 @@
             <!-- END user info-->
             <!-- START Menu-->
             <li class="active">
-                <a href="dashboard.html" title="Dashboard" data-toggle="collapse-next" class="has-submenu">
+                <a href="" title="Dashboard" data-toggle="collapse-next" class="has-submenu">
                     <em class="fa fa-dashboard"></em>
 
                     <span class="item-text">Dashboard</span>
@@ -101,46 +101,20 @@
                             <span class="item-text">Sent SmS</span>
                         </a>
                     </li>
-                    <li>
-                        <a href="table-standard.html" title="Standard" data-toggle="" class="no-submenu">
-                            <span class="item-text">Standard</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="table-extended.html" title="Extended" data-toggle="" class="no-submenu">
-                            <span class="item-text">Extended</span>
-                        </a>
-                    </li>
+
                 </ul>
                 <!-- END SubMenu item-->
             </li>
             <li>
                 <a href="#" title="Forms" data-toggle="collapse-next" class="has-submenu">
                     <em class="fa fa-edit"></em>
-                    <div class="label label-primary pull-right">new</div>
-                    <span class="item-text">Forms</span>
+                    <span class="item-text">Manage Clents</span>
                 </a>
                 <!-- START SubMenu item-->
                 <ul class="nav collapse ">
                     <li>
-                        <a href="form-standard.html" title="Standard" data-toggle="" class="no-submenu">
-                            <span class="item-text">Standard</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="form-extended.html" title="Extended" data-toggle="" class="no-submenu">
-                            <span class="item-text">Extended</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="form-validation.html" title="Validation" data-toggle="" class="no-submenu">
-                            <span class="item-text">Validation</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="form-wizard.html" title="Wizard" data-toggle="" class="no-submenu">
-                            <div class="label label-primary pull-right">new</div>
-                            <span class="item-text">Wizard</span>
+                        <a href="" title="Standard" data-toggle="" class="no-submenu">
+                            <span class="item-text">Clients</span>
                         </a>
                     </li>
                 </ul>
@@ -155,141 +129,24 @@
                 <ul class="nav collapse ">
                     <li>
                         <a href="panels.html" title="Panels" data-toggle="" class="no-submenu">
-                            <span class="item-text">Panels</span>
+                            <span class="item-text">System Settings</span>
                         </a>
                     </li>
-                    <li>
-                        <a href="portlets.html" title="Portlets" data-toggle="" class="no-submenu">
-                            <span class="item-text">Portlets</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="button.html" title="Buttons" data-toggle="" class="no-submenu">
-                            <span class="item-text">Buttons</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="icons.html" title="Icons" data-toggle="" class="no-submenu">
-                            <div class="label label-primary pull-right">+400</div>
-                            <span class="item-text">Icons</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="notifications.html" title="Notifications" data-toggle="" class="no-submenu">
-                            <span class="item-text">Notifications</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="typo.html" title="Typography" data-toggle="" class="no-submenu">
-                            <span class="item-text">Typography</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="grid.html" title="Grid" data-toggle="" class="no-submenu">
-                            <span class="item-text">Grid</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="grid-masonry.html" title="Grid Masonry" data-toggle="" class="no-submenu">
-                            <span class="item-text">Grid Masonry</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="animations.html" title="Animations" data-toggle="" class="no-submenu">
-                            <span class="item-text">Animations</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="dropdown-animations.html" title="Dropdown" data-toggle="" class="no-submenu">
-                            <span class="item-text">Dropdown</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="widgets.html" title="Widgets" data-toggle="" class="no-submenu">
-                            <span class="item-text">Widgets</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="maps.html" title="Maps" data-toggle="" class="no-submenu">
-                            <span class="item-text">Maps</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="calendar.html" title="Calendar" data-toggle="" class="no-submenu">
-                            <span class="item-text">Calendar</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="spinners.html" title="Spinners" data-toggle="" class="no-submenu">
-                            <span class="item-text">Spinners</span>
-                        </a>
-                    </li>
+
                 </ul>
                 <!-- END SubMenu item-->
             </li>
-            <li>
-                <a href="#" title="Pages" data-toggle="collapse-next" class="has-submenu">
-                    <em class="fa fa-file-text"></em>
-                    <div class="label label-primary pull-right">new</div>
-                    <span class="item-text">Pages</span>
-                </a>
-                <!-- START SubMenu item-->
-                <ul class="nav collapse ">
-                    <li>
-                        <a href="pages/landing.html" title="Landing" data-toggle="" class="no-submenu">
-                            <span class="item-text">Landing</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="pages/login.html" title="Login" data-toggle="" class="no-submenu">
-                            <span class="item-text">Login</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="pages/login-multi.html" title="Login Multi" data-toggle="" class="no-submenu">
-                            <span class="item-text">Login Multi</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="pages/signup.html" title="Sign up" data-toggle="" class="no-submenu">
-                            <span class="item-text">Sign up</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="pages/lock.html" title="Lock" data-toggle="" class="no-submenu">
-                            <span class="item-text">Lock</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="pages/recover.html" title="Recover Password" data-toggle="" class="no-submenu">
-                            <span class="item-text">Recover Password</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="template.html" title="Empty Template" data-toggle="" class="no-submenu">
-                            <span class="item-text">Empty Template</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="timeline.html" title="Timeline" data-toggle="" class="no-submenu">
-                            <span class="item-text">Timeline</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="inbox.html" title="Mail Inbox" data-toggle="" class="no-submenu">
-                            <div class="label label-primary pull-right">new</div>
-                            <span class="item-text">Mail Inbox</span>
-                        </a>
-                    </li>
-                </ul>
-                <!-- END SubMenu item-->
-            </li>
+
             <!-- END Menu-->
             <!-- Sidebar footer    -->
             <li class="nav-footer">
                 <div class="nav-footer-divider"></div>
                 <!-- START button group-->
-                <div class="btn-group text-center">
+                <div class="col-md-12">
+                    <h4>Conardson &copy {{date('Y')}}</h4>
+                </div>
+                <!-- <div class="btn-group text-center col-md-6">
+
                     <button type="button" data-toggle="tooltip" data-title="Add Contact" class="btn btn-link">
                         <em class="fa fa-user text-muted"><sup class="fa fa-plus"></sup>
                         </em>
@@ -300,7 +157,7 @@
                     <button type="button" data-toggle="tooltip" data-title="Logout" class="btn btn-link">
                         <em class="fa fa-sign-out text-muted"></em>
                     </button>
-                </div>
+                </div> -->
                 <!-- END button group-->
             </li>
         </ul>

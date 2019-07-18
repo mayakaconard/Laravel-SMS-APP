@@ -1,5 +1,5 @@
 @extends('layouts/master')
-
+@section('title', 'Dashboard/Home')
 @section('content')
 <section>
     <!-- START Page content-->
@@ -12,7 +12,7 @@
             <br>
             <small>Welcome user</small>
         </h3>
-        <div data-toggle="notify" data-onload="" data-message="&lt;b&gt;New Updates Available!&lt;/b&gt; Don't forget to check them!" data-options="{&quot;status&quot;:&quot;danger&quot;, &quot;pos&quot;:&quot;top-right&quot;}" class="hidden-xs"></div>
+        <!-- <div data-toggle="notify" data-onload="" data-message="&lt;b&gt;New Updates Available!&lt;/b&gt; Don't forget to check them!" data-options="{&quot;status&quot;:&quot;danger&quot;, &quot;pos&quot;:&quot;top-right&quot;}" class="hidden-xs"></div> -->
         <div class="row">
             <!-- START dashboard main content-->
             <div class="col-md-9">

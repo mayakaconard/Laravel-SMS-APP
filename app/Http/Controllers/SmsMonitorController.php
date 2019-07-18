@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\SmsMonitor;
 use Illuminate\Http\Request;
 use Excel;
+use Illuminate\Support\Facades\Auth;
 use Rap2hpoutre\FastExcel\FastExcel;
 
 class SmsMonitorController extends Controller
@@ -16,8 +17,9 @@ class SmsMonitorController extends Controller
      */
     public function index()
     {
+        $user = Auth::user();
         $data = SmsMonitor::all();
-        return view('app.sent_items', compact("data"));
+        return view('app.sent_items', compact("data", "user"));
     }
 
     /**
