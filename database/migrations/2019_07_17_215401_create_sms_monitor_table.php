@@ -13,7 +13,7 @@ class CreateSmsMonitorTable extends Migration
      */
     public function up()
     {
-        Schema::create('sms_monitor', function (Blueprint $table) {
+        Schema::create('sms_monitors', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('sender_id');
             $table->string('receiver_no');
@@ -22,7 +22,7 @@ class CreateSmsMonitorTable extends Migration
             $table->string('signature')->nullable();
             $table->string('status');
             $table->string('statusCode');
-            $table->float('cost');
+            $table->string('cost');
             $table->integer('messageParts');
             $table->timestamps();
         });
