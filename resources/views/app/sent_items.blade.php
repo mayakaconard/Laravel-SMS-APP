@@ -21,7 +21,7 @@
                         <div class="col-md-12">
                             <div class="btn-group pull-right">
 
-                                <a href="" type="button" class="btn btn-labeled btn-success btn-sm">
+                                <a href="{{ url('downloadExcel') }}" class="btn btn-labeled btn-success btn-sm">
                                     <span class="btn-label"><i class="fa fa-arrow-circle-left"></i>
                                     </span>Export CSV</a>
                                 <!-- Danger button with label -->
@@ -43,25 +43,33 @@
                                 <thead>
                                     <tr>
                                         <th>No</th>
-                                        <th>Sender</th>
+                                        <th>Status</th>
                                         <th>Receiver</th>
                                         <th>Message</th>
-                                        <th>Status</th>
+                                        <th>Cost</th>
                                         <th>Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    <?php $count = 1; ?>
+                                    @foreach($data as $items)
                                     <tr>
-                                        <td>Trident</td>
-                                        <td>Internet Explorer 4.0</td>
-                                        <td>Win 95+</td>
-                                        <td>4</td>
-                                        <td>2015-01-01</td>
-                                        <td></td>
+                                        <td>{{$count}}</td>
+                                        <td style="width: 200px; ">{{$items->status}}</td>
+                                        <td style="width: 200px; ">{{$items->receiver_no}}</td>
+                                        <td style="width: 500px; text-align: left;">{{$items->message}}</td>
+                                        <td>{{$items->cost}}</td>
+                                        <td>
+                                            <div class="btn-group">
+                                                <a href="" class="btn btn-danger btn-sm"> <i class="fa fa-trash-o"> </i></a>
+                                                <a href="" class="btn btn-warning btn-sm"> <i class="fa fa-eye"> </i></a>
+                                            </div>
+                                        </td>
+
                                     </tr>
 
-
-
+                                    <?php $count++; ?>
+                                    @endforeach
 
 
                                 </tbody>

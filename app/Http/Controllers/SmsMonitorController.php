@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\SmsMonitor;
 use Illuminate\Http\Request;
+use Excel;
+use Rap2hpoutre\FastExcel\FastExcel;
 
 class SmsMonitorController extends Controller
 {
@@ -13,7 +16,8 @@ class SmsMonitorController extends Controller
      */
     public function index()
     {
-        return view('app.sent_items');
+        $data = SmsMonitor::all();
+        return view('app.sent_items', compact("data"));
     }
 
     /**
@@ -21,6 +25,22 @@ class SmsMonitorController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    //  export data to excel
+    public function downloadExcel()
+    {
+        // $data = SmsMonitor::all();
+
+        // $data = \DB::select("select  s.id,u.first_name as sender, s.receiver_no,s.message, s.status FROM sms_monitors s 
+        // INNER JOIN users u ON
+        // u.id=s.sender_id");
+        // return $data;
+
+        //return (new FastExcel($data))->export('report.csv');
+        return (new FastExcel(SmsMonitor::all()))->download('sms_report.csv');
+    }
+
+
     public function create()
     {
         //

@@ -37,6 +37,8 @@ Route::post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail'
 Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm')->name('password.reset');
 Route::post('password/reset', 'Auth\ResetPasswordController@reset');
 
+
+Route::get('downloadExcel', 'SmsMonitorController@downloadExcel');
 Route::post('sendMessage', ['as' => 'sendMessage', 'uses' => 'SendSmsController@sendMessage']);
 
 Route::group(['prefix' => '/Dashboard'], function () {
