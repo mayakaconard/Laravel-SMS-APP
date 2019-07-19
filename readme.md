@@ -47,4 +47,4 @@ cp .env.example .env
 
 ## License
 
-The Laravel project is open-source software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+The Laravel project is open-source software licensed under the [MIT license](https://github.com/mayakaconard).
