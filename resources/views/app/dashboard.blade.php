@@ -15,7 +15,7 @@
         <!-- <div data-toggle="notify" data-onload="" data-message="&lt;b&gt;New Updates Available!&lt;/b&gt; Don't forget to check them!" data-options="{&quot;status&quot;:&quot;danger&quot;, &quot;pos&quot;:&quot;top-right&quot;}" class="hidden-xs"></div> -->
         <div class="row">
             <!-- START dashboard main content-->
-            <div class="col-md-9">
+            <div class="col-md-12">
                 <!-- START summary widgets-->
                 <div class="row">
                     <div class="col-lg-3 col-sm-6">
@@ -25,7 +25,7 @@
                                 <div class="row row-table row-flush">
                                     <div class="col-xs-8">
                                         <p class="mb0">SMS Today</p>
-                                        <h3 class="m0">1.5k</h3>
+                                        <h3 class="m0">3</h3>
                                     </div>
                                     <div class="col-xs-4 text-center">
                                         <em class="fa fa-user fa-2x"><sup class="fa fa-plus"></sup>
@@ -49,7 +49,7 @@
                                 <div class="row row-table row-flush">
                                     <div class="col-xs-8">
                                         <p class="mb0">SMS This Week</p>
-                                        <h3 class="m0">50%</h3>
+                                        <h3 class="m0">50</h3>
                                     </div>
                                     <div class="col-xs-4 text-center">
                                         <em class="fa fa-users fa-2x"></em>
@@ -72,7 +72,7 @@
                                 <div class="row row-table row-flush">
                                     <div class="col-xs-8">
                                         <p class="mb0">SMS Last Week</p>
-                                        <h3 class="m0">28%</h3>
+                                        <h3 class="m0">28</h3>
                                     </div>
                                     <div class="col-xs-4 text-center">
                                         <em class="fa fa-search fa-2x"></em>
@@ -95,7 +95,7 @@
                                 <div class="row row-table row-flush">
                                     <div class="col-xs-8">
                                         <p class="mb0">SMS Last Month</p>
-                                        <h3 class="m0">140.5 kb</h3>
+                                        <h3 class="m0">140</h3>
                                     </div>
                                     <div class="col-xs-4 text-center">
                                         <em class="fa fa-globe fa-2x"></em>
@@ -131,105 +131,7 @@
             </div>
             <!-- END dashboard main content-->
             <!-- START dashboard sidebar-->
-            <div class="col-md-3">
-                <!-- START messages-->
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <div class="pull-right label label-info">33</div>
-                        <div class="panel-title">Unread Messages</div>
-                    </div>
-                    <!-- START list group-->
-                    <div class="list-group">
-                        <!-- START list group item-->
-                        <a href="#" class="list-group-item">
-                            <div class="media">
-                                <div class="pull-left">
-                                    <img style="width: 48px; height: 48px;" src="app/img/user/01.jpeg" alt="Image" class="media-object img-rounded">
-                                </div>
-                                <div class="media-body clearfix">
-                                    <small class="pull-right">2h</small>
 
-                                    <strong class="media-heading text-primary">
-                                        <div class="point point-success point-lg text-left"></div>Sheila Carter
-                                    </strong>
-                                    <p class="mb-sm">
-                                        <small>Cras sit amet nibh libero, in gravida nulla. Nulla...</small>
-                                    </p>
-                                </div>
-                            </div>
-                        </a>
-                        <!-- END list group item-->
-                        <!-- START list group item-->
-                        <a href="#" class="list-group-item">
-                            <div class="media">
-                                <div class="pull-left">
-                                    <img style="width: 48px; height: 48px;" src="app/img/user/04.jpeg" alt="Image" class="media-object img-rounded">
-                                </div>
-                                <div class="media-body clearfix">
-                                    <small class="pull-right">3h</small>
-                                    <strong class="media-heading text-primary">
-                                        <div class="point point-success point-lg text-left"></div>Rich Reynolds
-                                    </strong>
-                                    <p class="mb-sm">
-                                        <small>Cras sit amet nibh libero, in gravida nulla. Nulla...</small>
-                                    </p>
-                                </div>
-                            </div>
-                        </a>
-                        <!-- END list group item-->
-                        <!-- START list group item-->
-                        <a href="#" class="list-group-item">
-                            <div class="media">
-                                <div class="pull-left">
-                                    <img style="width: 48px; height: 48px;" src="app/img/user/03.jpeg" alt="Image" class="media-object img-rounded">
-                                </div>
-                                <div class="media-body clearfix">
-                                    <small class="pull-right">4h</small>
-                                    <strong class="media-heading text-primary">
-                                        <div class="point point-danger point-lg text-left"></div>Beverley Pierce
-                                    </strong>
-                                    <p class="mb-sm">
-                                        <small>Cras sit amet nibh libero, in gravida nulla. Nulla...</small>
-                                    </p>
-                                </div>
-                            </div>
-                        </a>
-                        <!-- END list group item-->
-                        <!-- START list group item-->
-                        <a href="#" class="list-group-item">
-                            <div class="media">
-                                <div class="pull-left">
-                                    <img style="width: 48px; height: 48px;" src="app/img/user/06.jpeg" alt="Image" class="media-object img-rounded">
-                                </div>
-                                <div class="media-body clearfix">
-                                    <small class="pull-right">4h</small>
-                                    <strong class="media-heading text-primary">
-                                        <div class="point point-danger point-lg text-left"></div>Alex Somar
-                                    </strong>
-                                    <p class="mb-sm">
-                                        <small>Vestibulum pretium aliquam scelerisque.</small>
-                                    </p>
-                                </div>
-                            </div>
-                        </a>
-                        <!-- END list group item-->
-                    </div>
-                    <!-- END list group-->
-                    <!-- START panel footer-->
-                    <div class="panel-footer clearfix">
-                        <a href="#" class="pull-left">
-                            <small>Read All</small>
-                        </a>
-                        <a href="#" class="pull-right">
-                            <small>Dismiss All</small>
-                        </a>
-                    </div>
-                    <!-- END panel-footer-->
-                </div>
-                <!-- END messages-->
-    
-                
-            </div>
             <!-- END dashboard sidebar-->
         </div>
     </section>
