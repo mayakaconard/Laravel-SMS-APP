@@ -15,7 +15,7 @@ class CreateSmsMonitorTable extends Migration
     {
         Schema::create('sms_monitors', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('sender_id');
+            $table->integer('sender_id');
             $table->string('receiver_no');
             $table->string('message');
             $table->string('messageId');
