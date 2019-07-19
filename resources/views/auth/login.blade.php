@@ -7,16 +7,16 @@
     <p class="text-center mb-lg">
         <br>
         <a href="#">
-            <img src="{{asset('assets/app/img/logo3.png')}}" alt="Image" class="block-center img-rounded">
+            <img src="{{asset('assets/app/img/sms.png')}}" style="height:80px; width:80px;" alt="Image" class="block-center img-rounded">
         </a>
     </p>
     <p class="text-center mb-lg">
-        <strong>SIGN IN.</strong>
+        <strong>SIGN IN</strong>
     </p>
     <div class="panel-body">
         <form role="form" class="mb-lg" method="POST" action="{{route('login')}}">
             @csrf
-            <div class="text-right mb-sm"><a href="{{route('register')}}" class="text-muted">Need to Signup?</a>
+            <div class="text-right mb-sm"><a href="" class="text-muted"></a>
             </div>
             <div class="form-group has-feedback">
                 <input id="exampleInputEmail1" name="email" type="email" placeholder="Enter email" class="form-control">
@@ -31,6 +31,12 @@
                 </div>
             </div>
             <button type="submit" class="btn btn-block btn-primary">Login</button>
+            <div class="">
+                <label>
+
+                    <span class=""></span>Need an account? <a href="{{route('register')}}">Click to Signup</a>
+                </label>
+            </div>
         </form>
     </div>
 </div>
