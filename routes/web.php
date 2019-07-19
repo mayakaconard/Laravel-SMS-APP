@@ -45,4 +45,5 @@ Route::group(['prefix' => '/Dashboard'], function () {
     Route::get('home', ['as' => 'home', 'uses' => 'HomeController@index']);
     Route::get('sendsms', ['as' => 'sendSMS', 'uses' => 'SendSmsController@index']);
     Route::get('sent_messages', ['as' => 'sent_messages', 'uses' => 'SmsMonitorController@index']);
+    Route::get('clients', ['as' => 'clients', 'uses' => 'ClientsController@index']);
 });

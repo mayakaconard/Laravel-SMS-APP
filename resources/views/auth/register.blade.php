@@ -13,6 +13,7 @@
     <p class="text-center mb-lg">
         <strong>SIGNUP.</strong>
     </p>
+    @include('flash::message')
     <div class="panel-body">
         <form role="form" action="{{route('register')}}" method="POST">
             @csrf

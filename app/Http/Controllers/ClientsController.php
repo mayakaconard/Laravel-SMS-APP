@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Clients;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ClientsController extends Controller
 {
@@ -13,7 +15,9 @@ class ClientsController extends Controller
      */
     public function index()
     {
-        //
+        $user = Auth::user();
+        $clients = Clients::all();
+        return view('app.clients', compact('clients', 'user'));
     }
 
     /**

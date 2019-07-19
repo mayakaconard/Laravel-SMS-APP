@@ -10,6 +10,8 @@
     <meta name="keywords" content="">
     <meta name="author" content="">
     <title>@yield('title')</title>
+
+    @yield('style')
     <link rel="stylesheet" href="{{asset('assets/app/css/bootstrap.css')}}">
     <!-- Vendor CSS-->
     <link rel="stylesheet" href="{{asset('assets/vendor/fontawesome/css/font-awesome.min.css')}}">
@@ -323,8 +325,9 @@
         <!-- START Main section-->
         @yield('content')
         <!-- END Main wrapper-->
-        <!-- START Scripts-->
+        <!-- START Scripts-->@section('style')
         <!-- Main vendor Scripts-->
+        @yield('scripts')
         <script src="{{asset('assets/vendor/jquery/jquery.min.js')}}"></script>
         <script src="{{asset('assets/vendor/bootstrap/js/bootstrap.min.js')}}"></script>
         <!-- Plugins-->

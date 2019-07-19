@@ -87,6 +87,7 @@ class RegisterController extends Controller
 
 
         if ($user->save()) {
+            flash('Account created successfully')->success()->important();
             return redirect('/login');
         } else {
             return   ["data" => "data not inserted", "status" => 400];

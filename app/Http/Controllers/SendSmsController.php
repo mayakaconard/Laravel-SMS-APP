@@ -77,6 +77,10 @@ class SendSmsController extends Controller
         $data->messageParts = $result2->data->SMSMessageData->Recipients[0]->messageParts;
 
         if ($data->save()) {
+            flash('SMS Sent to ' . $to . 'successfully')->success()->important();
+            return back();
+        } else {
+            flash('An error occurred while sending message. Please contact your SMS provider');
             return back();
         }
     }

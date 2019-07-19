@@ -1,5 +1,12 @@
 @extends('layouts/master')
 @section('title', 'Dashboard/Send SMS')
+@section('style')
+<style>
+    .error {
+        color: red;
+    }
+</style>
+@stop
 @section('content')
 <section>
     <!-- START Page content-->
@@ -15,7 +22,9 @@
         <div class="row">
             <!-- START Send sms content content-->
             <div class="col-md-12">
+
                 <div data-toggle="portlet" class="col-lg-12">
+                    @include('flash::message')
                     <!-- START panel-->
                     <div class="panel panel-primary">
                         <div class="panel-heading portlet-handler">Send SMS
@@ -23,18 +32,19 @@
                                 <em class="fa fa-times"></em>
                             </a>
                         </div>
-                        <form role="form" method="POST" action="{{route('sendMessage')}}">
+                        <form id="send" method="POST" action="{{route('sendMessage')}}">
                             @csrf
                             <div class="panel-body">
 
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label>To Number</label>
-                                        <input type="text" name="receiver" placeholder="Mobile number e.g. +254700000000" class="form-control">
+                                        <input type="text" id="receiver" required name="receiver" placeholder="Mobile number e.g. +254700000000" class="form-control">
+                                        <div id="error"></div>
                                     </div>
                                     <div class="form-group">
-                                        <label>From Number</label>
-                                        <input type="text" name="sender" placeholder="Enter Sender Id" class="form-control">
+                                        <label>System user</label>
+                                        <input type="text" name="sender" disabled value="{{$user->first_name}}" placeholder="Enter Sender Id" class="form-control">
                                     </div>
                                     <!-- <div class="checkbox c-checkbox">
                                         <label>
@@ -46,7 +56,8 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label>Message</label>
-                                        <textarea name="message" class="form-control" rows="5"> </textarea>
+                                        <textarea name="message" required id="message" class="form-control" rows="5"> </textarea>
+                                        <div id="error"></div>
                                     </div>
                                     <!-- <div class="form-group">
                                         <label>From Number</label>
@@ -83,5 +94,54 @@
 </section>
 <!-- END Main section-->
 </section>
+
+@endsection
+
+@section('scripts')
+<script type="text/javascript" src="{{url('js/jquery.validate.js')}}"></script>
+<script>
+    document).ready(
+            $(function() {
+
+                jQuery.validator.addMethod("phoneUS", function(phone_number, element) {
+                    phone_number = phone_number.replace(/\s+/g, "");
+                    return this.optional(element) || phone_number.length > 9 &&
+                        phone_number.match(/^\+[0-9]{12}$/);
+                }, "Specify a valid phone number!");
+                $("#send").validate({
+
+                    rules: {
+                        receiver: {
+                            required: true,
+                            phoneUS: true
+                        },
+                        message: {
+                            required: true,
+
+                        },
+
+
+                    },
+                    messages: {
+                        receiver: {
+                            required: "Kindly provide receiver number",
+                            phoneUS: "Please enter a valid phone number e.g +254700000000"
+                        },
+                        message: {
+                            required: "Please provide the massage to be sent",
+
+                        },
+                        // start_date: {
+                        //     required: "Please provide Transaction date",
+                        // },
+
+                    },
+
+                });
+
+
+
+            });
+</script>
 
 @endsection

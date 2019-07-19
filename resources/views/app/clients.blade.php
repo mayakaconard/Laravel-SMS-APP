@@ -1,5 +1,5 @@
 @extends('layouts/master')
-@section('title', 'Dashboard/Manage SMS')
+@section('title', 'Dashboard/Clients')
 
 @section('content')
 <section>
@@ -9,7 +9,7 @@
             <span class="btn-label"><i class="fa fa-plus-circle"></i>
             </span>Add Item</button> -->
         <h3>
-            Dashboard<small> Manage Items</small>
+            Dashboard <small>Clients</small>
 
 
         </h3>
@@ -17,19 +17,13 @@
             <!-- START Send sms content content-->
             <div class="col-md-12">
                 <div data-toggle="portlet" class="col-lg-12">
-                    @include('flash::message')
                     <!-- START panel-->
                     <div class="row">
                         <div class="col-md-12">
                             <div class="btn-group pull-right">
-
-                                <a href="{{ url('downloadExcel') }}" class="btn btn-labeled btn-success btn-sm">
-                                    <span class="btn-label"><i class="fa fa-arrow-circle-left"></i>
-                                    </span>Export CSV</a>
-                                <!-- Danger button with label -->
-                                <!-- <a href="" type="button" class="btn btn-labeled btn-danger btn-sm">
-
-                                    Export PDF<span class="btn-label"><i class="fa fa-arrow-circle-right"></i></span></a> -->
+                                <button type="button" class="btn btn-labeled btn-primary pull-right">
+                                    <span class="btn-label"><i class="fa fa-plus-circle"></i>
+                                    </span>Add Client</button>
                             </div>
                         </div>
                     </div>
@@ -45,22 +39,22 @@
                                 <thead>
                                     <tr>
                                         <th>No</th>
-                                        <th>Status</th>
-                                        <th>Receiver</th>
-                                        <th>Message</th>
-                                        <th>Cost</th>
+                                        <th>First Name</th>
+                                        <th>Surname</th>
+                                        <th>Mobile No.</th>
+                                        <th>Email</th>
                                         <th>Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <?php $count = 1; ?>
-                                    @foreach($data as $items)
+                                    @foreach($clients as $client)
                                     <tr>
                                         <td>{{$count}}</td>
-                                        <td style="width: 200px; ">{{$items->status}}</td>
-                                        <td style="width: 200px; ">{{$items->receiver_no}}</td>
-                                        <td style="width: 500px; text-align: left;">{{$items->message}}</td>
-                                        <td>{{$items->cost}}</td>
+                                        <td style="width: 200px; ">{{$client->first_name}}</td>
+                                        <td style="width: 200px; ">{{$client->surname}}</td>
+                                        <td style="width: 500px; text-align: left;">{{$client->mobile_no}}</td>
+                                        <td>{{$client->email_address}}</td>
                                         <td>
                                             <div class="btn-group">
                                                 <a href="" class="btn btn-danger btn-sm"> <i class="fa fa-trash-o"> </i></a>

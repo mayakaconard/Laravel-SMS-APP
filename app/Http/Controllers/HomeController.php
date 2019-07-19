@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\SmsMonitor;
 
 class HomeController extends Controller
 {
@@ -25,7 +26,7 @@ class HomeController extends Controller
     public function index()
     {
         $user = Auth::user();
-
-        return view('app.dashboard', compact('user'));
+        //$smstoday = SmsMonitor::where()
+        return view('app.dashboard', compact('user', 'smstoday'));
     }
 }

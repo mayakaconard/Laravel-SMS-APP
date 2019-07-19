@@ -81,11 +81,6 @@
                             <span class="item-text">Send SMS</span>
                         </a>
                     </li>
-                    <li>
-                        <a href="chart-radial.html" title="Radial" data-toggle="" class="no-submenu">
-                            <span class="item-text">Manage Items</span>
-                        </a>
-                    </li>
                 </ul>
                 <!-- END SubMenu item-->
             </li>
@@ -113,7 +108,7 @@
                 <!-- START SubMenu item-->
                 <ul class="nav collapse ">
                     <li>
-                        <a href="" title="Standard" data-toggle="" class="no-submenu">
+                        <a href="{{route('clients')}}" title="Standard" data-toggle="" class="no-submenu">
                             <span class="item-text">Clients</span>
                         </a>
                     </li>

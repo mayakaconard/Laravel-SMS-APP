@@ -40,6 +40,8 @@ class SmsMonitorController extends Controller
 
         //return (new FastExcel($data))->export('report.csv');
         return (new FastExcel(SmsMonitor::all()))->download('sms_report.csv');
+        flash('CSV report generated successfully')->success()->important();
+        return back();
     }
 
 
